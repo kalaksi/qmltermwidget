@@ -476,6 +476,10 @@ TerminalDisplay::TerminalDisplay(QQuickItem *parent)
   // Tradeoff is performance decrease.
   setRenderTarget(QQuickPaintedItem::Image);
 
+  // Disable antialiasing for crisp text rendering.
+  setAntialiasing(false);
+  setSmooth(false);
+
 //  setFocusPolicy( Qt::WheelFocus );
 
   // enable input method support
